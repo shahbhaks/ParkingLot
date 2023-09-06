@@ -1,5 +1,7 @@
 package model;
 
+
+
 public class ParkingSpot extends BaseModel{
 
     private int number;

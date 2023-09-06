@@ -1,5 +1,7 @@
 package model;
 
+import model.enums.Status;
+
 import java.time.LocalDateTime;
 
 public class Payment extends BaseModel{
