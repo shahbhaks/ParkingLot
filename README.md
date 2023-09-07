@@ -1,4 +1,5 @@
-PROBLEM STATEMENT:
+**PROBLEM STATEMENT:**
+
 We will focus on the following set of requirements while designing the parking lot:
 
 The parking lot should have multiple floors where customers can park their cars - Done
@@ -21,7 +22,8 @@ The system should support a per-minute parking fee model based on Vehicle Type. 
 
 PS - This project also containes some TODO. You can be my guest and can raise a PR with these TODO implemented :P
 
-What the company is looking for or what are the company's expectations?
+**What the company is looking for or what are the company's expectations?**
+
 They are looking for people who can write code that has flexibility built-in, by adhering to the principles of Object-Oriented Development, and have the ability to deal with the real-life constraints/trade-offs while designing a system.
 
 It is important to note that they are not looking for a GUI and they are not assessing you on the capabilities around code required to do the I/O. The focus is on the overall design. So, while building a solution, it would be nicer (not mandatory) if the input to the code is provided either via unit tests or a file. Using a command-line (for input) can be tedious and difficult to test, so it is best avoided (again not mandatory). Following is a list of things to keep in mind, before you submit your code for any LLD/OOD/OOPs round:
@@ -50,7 +52,8 @@ Atomicity and Coverage of Unit Tests.
 
 Simplicity is the strongest trait of a piece of code. However, easily written code may not necessarily be simple code.
 
-Why LLD/OOD/OOPs in software engineering interviews?
+**Why LLD/OOD/OOPs in software engineering interviews?**
+
 So main reason behind asking this kind of problems in an interview is to see whether a candidate can do the following:
 
 Can a candidate write a working code in a given short span of time? So as to measure his/her delivery capability?
