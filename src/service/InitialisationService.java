@@ -16,11 +16,11 @@ public class InitialisationService {
     private ParkingSpotRepository parkingSpotRepository;
     private GateRepository gateRepository;
 
-    public InitialisationService() {
-        this.parkingLotRepository = new ParkingLotRepository();
-        this.parkingFloorRepository =new ParkingFloorRepository();
-        this.parkingSpotRepository = new ParkingSpotRepository();
-        this.gateRepository = new GateRepository();
+    public InitialisationService(ParkingLotRepository parkingLotRepository, ParkingFloorRepository parkingFloorRepository, ParkingSpotRepository parkingSpotRepository, GateRepository gateRepository) {
+        this.parkingLotRepository = parkingLotRepository;
+        this.parkingFloorRepository = parkingFloorRepository;
+        this.parkingSpotRepository = parkingSpotRepository;
+        this.gateRepository = gateRepository;
     }
 
     /***
@@ -42,7 +42,7 @@ public class InitialisationService {
         entryGate.setGateType(GateType.ENTRY);
         entryGate.setFloorNumber(1);
         entryGate.setStatus(Status.ACTIVE);
-       // entryGate.setParking(1);
+        entryGate.setParkingLotId(1);
 
         Gate exitGate = new Gate();
         exitGate.setId(2);
@@ -51,6 +51,7 @@ public class InitialisationService {
         exitGate.setGateType(GateType.EXIT);
         exitGate.setFloorNumber(1);
         exitGate.setStatus(Status.ACTIVE);
+        exitGate.setParkingLotId(1);
 
         parkingLot.setGates(List.of(entryGate,exitGate)); //java 11
         gateRepository.put(entryGate);
@@ -68,7 +69,7 @@ public class InitialisationService {
                 ParkingSpot parkingSpot=new ParkingSpot();
                 parkingSpot.setId(1000 + j);
                 parkingSpot.setStatus(Status.AVAILABLE);
-                parkingSpot.setNumber(i * 10 + j);  //1st floor=> 1*10+1=101, 102, 103
+                parkingSpot.setNumber(i * 100 + j);  //1st floor=> 1*100+1=101, 102, 103
                 //Random spot for vehicle
                 if(j%2==0) parkingSpot.setSupportedVehicleType(VehicleType.Two_Wheeler);
                 else parkingSpot.setSupportedVehicleType(VehicleType.Four_Wheeler);

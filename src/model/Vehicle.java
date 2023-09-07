@@ -11,6 +11,16 @@ public class Vehicle extends BaseModel{
 
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "number='" + number + '\'' +
+                ", colour='" + colour + '\'' +
+                ", make='" + make + '\'' +
+                ", vehicleType=" + vehicleType +
+                '}';
+    }
+
     public Vehicle(String number, String colour, String make, VehicleType vehicleType) {
         this.number = number;
         this.colour = colour;

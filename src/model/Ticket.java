@@ -8,6 +8,15 @@ public class Ticket extends BaseModel{
     private Vehicle vehicle;
     private ParkingSpot parkingSpot;
 
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "entryTime=" + entryTime +
+                ", vehicle=" + vehicle +
+                ", parkingSpot=" + parkingSpot +
+                '}';
+    }
+
     public LocalDateTime getEntryTime() {
         return entryTime;
     }

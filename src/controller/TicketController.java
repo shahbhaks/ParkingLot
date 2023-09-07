@@ -16,21 +16,22 @@ public class TicketController {
     }
 
     public IssueTicketResponseDTO getTicket(IssueTicketRequestDTO issueTicketRequestDTO){
-        IssueTicketResponseDTO issueTicketResponseDTO=new IssueTicketResponseDTO();
+        IssueTicketResponseDTO issueTicketResponseDTO = new IssueTicketResponseDTO();
         Ticket ticket;
         try{
-            if(issueTicketRequestDTO.getGateId()==0 ||
-            issueTicketRequestDTO.getVehicleType()==null ||
-            issueTicketRequestDTO.getVehicleNumber()==null){
+            if(issueTicketRequestDTO.getGateId() == 0 ||
+                    issueTicketRequestDTO.getVehicleType() == null ||
+                    issueTicketRequestDTO.getVehicleNumber() == null ) {
                 throw new InvalidRequestDataException("Ticket generation request data is invalid");
             }
-            ticket=ticketService.getTicket(issueTicketRequestDTO.getVehicleType(),
+            ticket = ticketService.getTicket(issueTicketRequestDTO.getVehicleType(),
                     issueTicketRequestDTO.getVehicleNumber(),
                     issueTicketRequestDTO.getVehicleColour(),
                     issueTicketRequestDTO.getVehicleMake(),
                     issueTicketRequestDTO.getGateId());
-
-        }catch (Exception e){
+            issueTicketResponseDTO.setResponseStatus(ResponseStatus.SUCCESS);
+            issueTicketResponseDTO.setTicket(ticket);
+        } catch (Exception e ){
             issueTicketResponseDTO.setResponseStatus(ResponseStatus.FAILURE);
             issueTicketResponseDTO.setFailureReason(e.getMessage());
         }

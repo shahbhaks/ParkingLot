@@ -1,6 +1,5 @@
 package dto;
 
-import model.Vehicle;
 import model.VehicleType;
 
 public class IssueTicketRequestDTO {
@@ -10,6 +9,18 @@ public class IssueTicketRequestDTO {
     private String vehicleColour;
     private String vehicleMake;
     private int gateId;
+
+    public IssueTicketRequestDTO(){
+
+    }
+
+    public IssueTicketRequestDTO(VehicleType vehicleType, String vehicleNumber, String vehicleColour, String vehicleMake, int gateId) {
+        this.vehicleType = vehicleType;
+        this.vehicleNumber = vehicleNumber;
+        this.vehicleColour = vehicleColour;
+        this.vehicleMake = vehicleMake;
+        this.gateId = gateId;
+    }
 
     public VehicleType getVehicleType() {
         return vehicleType;

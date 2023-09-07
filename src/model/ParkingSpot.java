@@ -9,6 +9,16 @@ public class ParkingSpot extends BaseModel{
     private Status status;
     private Vehicle vehicle;
 
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "number=" + number +
+                ", supportedVehicleType=" + supportedVehicleType +
+                ", status=" + status +
+                ", vehicle=" + vehicle +
+                '}';
+    }
+
     public int getNumber() {
         return number;
     }
