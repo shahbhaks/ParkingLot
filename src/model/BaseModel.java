@@ -5,20 +5,23 @@ import java.util.Date;
 
 public class BaseModel {
 
-    private Long id;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     //audit columns
     private Time createdAt;
     private Time updatedAt;
     private String createdBy;
     private String updatedBy;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Time getCreatedAt() {
         return createdAt;

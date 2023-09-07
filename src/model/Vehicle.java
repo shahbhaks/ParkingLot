@@ -7,6 +7,16 @@ public class Vehicle extends BaseModel{
     private String make;
     private VehicleType vehicleType;
 
+    public Vehicle(){
+
+    }
+
+    public Vehicle(String number, String colour, String make, VehicleType vehicleType) {
+        this.number = number;
+        this.colour = colour;
+        this.make = make;
+        this.vehicleType = vehicleType;
+    }
 
     public String getNumber() {
         return number;
