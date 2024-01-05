@@ -1,7 +1,18 @@
 **Requirements**
 
-The parking lot should have multiple floors where customers can park their cars.
-The parking lot should have multiple entry and exit points.
+1.The parking lot should have multiple floors where customers can park their cars.
+
+
+
+
+
+
+
+
+
+
+
+2.The parking lot should have multiple entry and exit points.
 Customers can collect a parking ticket from the entry points and can pay the parking fee at the exit points on their way out.
 Customers can pay the tickets at the automated exit panel or to the parking attendant.
 Customers can pay via both cash and credit cards.
@@ -14,24 +25,17 @@ Each parking floor should have a display board showing any free parking spot for
 The system should support a per-hour parking fee model. For example, customers have to pay $4 for the first hour, $3.5 for the second and third hours, and $2.5 for all the remaining hours.
 
 **Actors**
-Admin: Mainly responsible for adding and modifying parking floors, parking spots, entrance, and exit panels, adding/removing parking attendants, etc.
+1.Admin: Mainly responsible for adding and modifying parking floors, parking spots, entrance, and exit panels, adding/removing parking attendants, etc.
 Customer: All customers can get a parking ticket and pay for it.
 Parking attendant: Parking attendants can do all the activities on the customer’s behalf, and can take cash for ticket payment.
 System: To display messages on different info panels, as well as assigning and removing a vehicle from a parking spot.
 
-
-
-
-
-
-
-
 **Usecases**
-Add/Remove/Edit parking floor: To add, remove or modify a parking floor from the system. Each floor can have its own display board to show free parking spots.
-Add/Remove/Edit parking spot: To add, remove or modify a parking spot on a parking floor.
-Add/Remove a parking attendant: To add or remove a parking attendant from the system.
-Take ticket: To provide customers with a new parking ticket when entering the parking lot.
-Scan ticket: To scan a ticket to find out the total charge.
-Credit card payment: To pay the ticket fee with credit card.
-Cash payment: To pay the parking ticket through cash.
-Add/Modify parking rate: To allow admin to add or modify the hourly parking rate
+1.Add/Remove/Edit parking floor: To add, remove or modify a parking floor from the system. Each floor can have its own display board to show free parking spots.
+2.Add/Remove/Edit parking spot: To add, remove or modify a parking spot on a parking floor.
+3.Add/Remove a parking attendant: To add or remove a parking attendant from the system.
+4.Take ticket: To provide customers with a new parking ticket when entering the parking lot.
+5.Scan ticket: To scan a ticket to find out the total charge.
+6.Credit card payment: To pay the ticket fee with credit card.
+7.Cash payment: To pay the parking ticket through cash.
+8.Add/Modify parking rate: To allow admin to add or modify the hourly parking rate.
